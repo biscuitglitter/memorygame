@@ -1,0 +1,26 @@
+[
+    {
+      "id": 0,
+      "name": "fire"
+    },
+    {
+      "id": 1,
+      "name": "water"      },
+    {
+      "id": 2,
+      "name": "ground"
+    },
+    {
+      "id": 3,
+      "name": "air"
+    },
+    {
+      "id": 4,
+      "name": "glass"
+    },
+    {
+      "id": 5,
+      "name": "wood"
+    }
+  ]
+  
