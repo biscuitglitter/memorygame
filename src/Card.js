@@ -10,11 +10,12 @@ const Card = ({ card, handleClickedCards, pokemons }) => {
 
   return (
     <div>    
-    <div value={card.id} className="card" id={card.id} key={card.cardtitle} name="card" onClick={handleClick}>
-      card: {card.name}
+      <div value={card.id} className="card" pokemons={pokemons} id={card.id} onClick={handleClick}>    
+
       </div>
       </div>
   )
 }
 
 export default Card
+

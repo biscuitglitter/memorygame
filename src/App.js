@@ -1,15 +1,13 @@
 /* eslint-disable */
 
 import React, { useState, useEffect } from "react"
-import data from "./data.json"
 import CardDisplay from "./CardDisplay"
 import _ from 'lodash'
 import Scoreboard from "./Scoreboard"
-import PokemonAPI from "./PokemonAPI"
+import DataFetchRender from "./DataFetchRender"
 
-function App() {
-  
-  const [allCards, setCards] = useState(data)
+function App() {  
+  const [allCards, setCards] = useState([])
   const [allClickedCards, setClickedCards] = useState([])
   const [score, setScore] = useState("")
  
@@ -29,11 +27,10 @@ function App() {
   return (
     <div className="App">
       <Scoreboard score={score} />
-      <CardDisplay allCards={allCards} handleClickedCards={handleClickedCards} />
-      <PokemonAPI />
+      {/* <CardDisplay allCards={allCards} handleClickedCards={handleClickedCards} /> */}
+      <DataFetchRender allCards={allCards} setCards={setCards} />
     </div>
   )
 }
 
 export default App
-
