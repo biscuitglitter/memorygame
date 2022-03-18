@@ -20,3 +20,11 @@ body {
   flex-direction: row;
 }
 
+.card:hover {
+  color: orangered;
+}
+
+.scoreboard {
+  display: flex;
+  margin-bottom: 10px;
+}
