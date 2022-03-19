@@ -2,7 +2,7 @@ import React from "react"
 import Card from "./Card"
 import Scoreboard from "./Scoreboard"
 
-const CardDisplay = ({ allCards, handleClickedCards, score, highScore}) => {
+const CardDisplay = ({ allCards, handleClickedCards, score, highScore, setScore }) => {
 
     return (
     <div className="battle">
