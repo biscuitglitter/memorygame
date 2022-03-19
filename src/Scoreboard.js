@@ -1,21 +1,14 @@
 import React from "react"
 
-const Scoreboard = ({ score }) => {
+const Scoreboard = ({ score, highScore }) => {
 
   return (
-    <div className="scoreboard">    
-       score: {score} 
+    <div className="score">    
+      Score {score} 
+      <div>Highscore {highScore}</div>
     </div>
   )
 }
 
 export default Scoreboard
 
-
-// return (
-//     <div>    
-//     <div value={card.id} className="card" id={card.id} key={card.cardtitle} name="card" onClick={handleClick}>
-//       card: {card.name}
-//       </div>
-//       </div>
-//   )

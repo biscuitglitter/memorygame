@@ -1,29 +1,25 @@
 import React from "react"
 import Card from "./Card"
+import Scoreboard from "./Scoreboard"
 
-const CardDisplay = ({ allCards, handleClickedCards, pokemons }) => {
+const CardDisplay = ({ allCards, handleClickedCards, score, highScore}) => {
 
-  return (
-    <div>
+    return (
+    <div className="battle">
+     <p className="title">memory 
+        <span style={{color:  `hsl(${Math.random() * 360}, 100%, 64%)`}}>g</span><span style={{color:  `hsl(${Math.random() * 360}, 100%, 64%)`}}>a</span><span style={{color:  `hsl(${Math.random() * 360}, 100%, 64%)`}}>m</span><span style={{color:  `hsl(${Math.random() * 360}, 100%, 64%)`}}>e</span></p>
+     <div className="cardContainer">
       {allCards.map((card) => {
-        return (          
-          <Card card={card} pokemons={pokemons} key={card.id + 1} handleClickedCards={handleClickedCards} />  
+        return ( 
+          <Card card={card} key={card.id + 1} handleClickedCards={handleClickedCards} />  
         )
       })}
-    </div>
+        </div>
+        <Scoreboard score={score} highScore={highScore} className="scoreboard" />
+      </div>
+
   )
 }
 
 export default CardDisplay
 
-// return (
-//   <div>
-//     {allJobs.map((job) => {
-//       return (
-//         <JobComponent job={job} key={job.id + 1} handleToggle={handleToggle} handleFilter={handleFilter} />
-//       )
-//     })}
-
-//     <button style={{ margin: "20px" }} onClick={handleFilter}> Liked only </button>
-//   </div>
-// )

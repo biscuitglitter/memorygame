@@ -1,6 +1,6 @@
 import React from "react"
 
-const Card = ({ card, handleClickedCards, pokemons }) => {
+const Card = ({ card, handleClickedCards }) => {
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -9,11 +9,7 @@ const Card = ({ card, handleClickedCards, pokemons }) => {
   }
 
   return (
-    <div>    
-      <div value={card.id} className="card" pokemons={pokemons} id={card.id} onClick={handleClick}>    
-
-      </div>
-      </div>
+      <div className="card" id={card.id} onClick={handleClick}> {card.name} </div>
   )
 }
 

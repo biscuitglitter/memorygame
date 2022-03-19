@@ -3,16 +3,21 @@
 import React, { useState, useEffect } from "react"
 import CardDisplay from "./CardDisplay"
 import _ from 'lodash'
-import Scoreboard from "./Scoreboard"
-import DataFetchRender from "./DataFetchRender"
+import data from "./data.json"
 
 function App() {  
-  const [allCards, setCards] = useState([])
+  const [allCards, setCards] = useState(data)
   const [allClickedCards, setClickedCards] = useState([])
   const [score, setScore] = useState("")
- 
+  const [highScore, setHighScore] = useState("")
+
   const handleClickedCards = (id) => {
     setCards(_.shuffle(allCards))
+    if (score > highScore) {
+      setHighScore(score)
+    } else if (highScore > score) {
+      setHighScore(highScore)
+    } 
     const card = allCards.find(card => card.id === Number(id))
     if (allClickedCards.includes(card)) {
       console.log("GAME OVER")
@@ -21,14 +26,12 @@ function App() {
     } else {
       setClickedCards([...allClickedCards, card])
       setScore(Number(score) + 1)
-    }
+    } 
   }
  
   return (
     <div className="App">
-      <Scoreboard score={score} />
-      {/* <CardDisplay allCards={allCards} handleClickedCards={handleClickedCards} /> */}
-      <DataFetchRender allCards={allCards} setCards={setCards} />
+      <CardDisplay score={score} highScore={highScore} allCards={allCards} handleClickedCards={handleClickedCards} /> 
     </div>
   )
 }
