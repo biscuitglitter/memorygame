@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 function HowToPlay() {
-  const [active, setActive] = useState("")
+  const [active, setActive] = useState("hidden")
 
   const handleClick = () => {
     setActive(!active);
