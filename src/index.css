@@ -4,22 +4,19 @@ body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .App {
   margin: 0 auto;
   margin-top: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   font-family: "Rubik", sans-serif;
-}
-
-.scoreboard {
-  display: flex;
-  width: 100px;
-  height: 75px;
-  text-align: center;
+  gap: 30px;
 }
 
 .battle {
@@ -28,11 +25,60 @@ body {
   flex-direction: column;
   width: 500px;
   height: 250px;
-  padding: 20px;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#informationalSideBar {
+  padding: 3px;
+  border: 1px solid #333;
+  width: 145px;
+  height: 170px;
+  border-radius: 4px;
+  font-size: 15px;
+  position: relative;
+  left: -215px;
+  top: -33px;
+  text-align: center;
+}
+
+
+.topContainer {
+  display: flex;
+  font-size: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 70px;
+  max-width: 300px;
+  gap: 10px;
 }
 
 .title {
-  font-size: 20px;
+  text-align: center;
+}
+
+.howToPlay {
+  cursor: pointer;
+  width: 100px;
+  height: 45px;
+  font-size: 15px;
+}
+
+.howToPlayContainer {
+  max-width: 100px;
+}
+
+.active {
+  display: flex;
+}
+
+.hidden {
+display: none;
+}
+
+#howToPlayDetails {
+  font-size: 14px;
+  width: 125px;
   text-align: center;
 }
 
@@ -58,6 +104,13 @@ body {
   color: orangered;
 }
 
+.scoreboard {
+  display: flex;
+  width: 100px;
+  height: 75px;
+  text-align: center;
+}
+
 .score {
   text-align: center;
   width: 120px;
@@ -70,3 +123,4 @@ body {
 .winMessage {
   font-size: 18px;
 }
+
